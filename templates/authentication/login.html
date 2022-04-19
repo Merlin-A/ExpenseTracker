@@ -1,0 +1,108 @@
+{% extends 'base_auth.html' %} {% block content %}
+{% load static %}
+<link href="{%static 'css/main.css'%}" rel="stylesheet">
+
+
+<!--Google Font-->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+</style>
+<!--Google Font-->
+
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card mt-5">
+
+
+
+            <div class="card-body">
+
+
+
+                <div class="card-title py-2">
+                    <h4 style="text-align: center; font-family: 'Roboto Slab', serif;">Log in to Expense Tracker</h4>
+
+                </div>
+
+
+                <div class="container">
+                    {% include 'partials/messages.html' %}
+                </div>
+
+                <form action="{% url 'login' %}" method="post">
+
+                    {% csrf_token %}
+
+
+
+                    
+
+
+                    <div class="form-group">
+                        <input type="text" name="username" placeholder="Username" id="usernameField"
+                            value="{{fieldValues.username}}" class="form-control form-control-sm" />
+                    </div>
+
+
+
+                    <br>
+
+
+
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" id="passwordField"
+                            class="form-control form-control-sm" />
+
+
+                        <small class="float-right py-1 showPasswordToggle"
+                            style="float: right; font-weight: 700;">Show</small>
+
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <!-- div.input-->
+
+
+                        <input type="submit" value="Log In" style=" width: 100%;"
+                            class="login-btn btn btn-primary btn-block submit-btn" />
+
+
+                    </div>
+
+                    <br>
+
+
+                    <div class="container">
+                        <div class="no-account">
+                            
+                            <p>New To Expense Tracker? <a href = "{%url 'register'%}">Create an Account</a> </p>
+                        </div>
+                        <div class="forgot-password">
+                            
+                            <p class = "text">Didn't write the password down? <a href = "{%url 'reset-password'%}">Reset Password</a> </p>
+                        </div>
+
+                </div>
+
+                   
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+</div>
+</div>
+
+<script src="{% static 'js/register.js'%}"> </script>
+
+{% endblock content %}

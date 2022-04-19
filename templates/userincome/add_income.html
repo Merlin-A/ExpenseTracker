@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="contiainer mt-4">
+    <div class="row">
+        <div class="col-md-9">
+
+            <div>
+                <nav aria-label="breadcrumb" style="padding: 5px; background-color: gainsboro;">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'income' %}">Income</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">My Income</li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="card mt-3">
+    <div class="card-body">
+        <form action="{% url 'add-income' %}" method="post">
+            {% include 'partials/messages.html' %}
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="">Amount</label>
+                <input type="number" value = "{{values.amount}}" class="form-control form-control-sm" name="amount">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="">Description</label>
+                <input type="text" value = "{{values.description}}"class="form-control form-control-sm" name="description">
+            </div>
+
+            <br>
+
+
+            <div class="form-group">
+                <label for="">Income Source</label>
+                <select class="form-control form-control" name="source">
+                    <option selected value={{source.name}}> Choose.... </option>
+                    {% for source in sources %}
+
+
+                    <option name="source" value={{source.name}}>{{source.name}}</option>
+
+ 
+
+
+
+                    {% endfor %}
+
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="">Date of Expense</label>
+                <input type="date" value = "{{values.date}}"  class="form-control form-control-sm" name="date">
+            </div>
+            <br>
+
+            <input type="submit" value="Submit" class="btn btn-primary btn-primary-sm">
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}
