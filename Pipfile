@@ -17,6 +17,7 @@ validate-email = "*"
 six = "*"
 django-libs = "*"
 props = "*"
+matplotlib = "*"
 
 [dev-packages]
 

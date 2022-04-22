@@ -3,14 +3,14 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from matplotlib.style import context
 from django.contrib import messages
-from tomlkit import date
+from tomlkit import date, datetime
 from expenses.models import Category
 from .models import Category, Expense
 import json
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 from userpreferences.models import UserPreference
-from datetime import time
+import datetime
 # Create your views here.
 
 
@@ -60,11 +60,13 @@ def index(request):
 
 def add_expense(request):
     categories = Category.objects.all()
+    todays_date = datetime.date.today()
+
     context = {
 
         'categories': categories,
-        'values': request.POST
-        
+        'values': request.POST,
+        'today': todays_date        
     }
     if request.method == 'GET':
        
@@ -192,3 +194,39 @@ def expense_delete(request, id):
     expense.delete()
     messages.success(request, 'Expense Deleted Succesfully')
     return redirect('expenses')
+
+
+
+def expense_category_summary(request):
+
+    todays_date = datetime.date.today()
+    six_months_ago = todays_date - datetime.timedelta(180)
+    expenses = Expense.objects.filter(owner = request.user, date__gte = six_months_ago, date__lte = todays_date)
+    finalrep = {}
+
+    def get_category(expense):
+        return expense.category
+
+    
+    category_list = list(set(map(get_category, expenses))) #set so all the categories even teh duplicate ones are listed 
+
+    def get_expense_category_amount(category):
+        amount = 0
+        filtered_by_category = expenses.filter(category = category)
+
+        for item in filtered_by_category:
+            amount += item.amount 
+        return amount
+
+    for x in expenses:
+        for y in category_list:
+
+            finalrep[y] = get_expense_category_amount(y)
+    
+    return JsonResponse({'expense_category_data': finalrep}, safe = False)
+
+
+
+
+def statsView(request):
+    return render(request, 'expenses/stats.html')

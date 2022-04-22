@@ -57,8 +57,8 @@
             <td value="{{income.source}}">{{income.source}}</td>
             <td value="{{income.description}}">{{income.description}}</td>
             <td value="{{income.date}}">{{income.date}}</td>
-            <td><a href="{% url 'income-edit' income.id %}" class="btn btn-secondary btn-sm">Edit</a></td>
-            <td><a href="{% url 'income-delete' income.id %}" class="btn btn-danger btn-sm" value="Delete">Delete</a>
+            <td><a href="{% url 'income-edit' income.id %}" class="btn edit-button">Edit</a></td>
+            <td><a href="{% url 'income-delete' income.id %}" class="btn delete-button" value="Delete">Delete</a>
             </td>
           </tr>
 

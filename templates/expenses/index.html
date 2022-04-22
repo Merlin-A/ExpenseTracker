@@ -72,8 +72,8 @@
                     <td value = "{{expense.category}}">{{expense.category}}</td>
                     <td value = "{{expense.description}}">{{expense.description}}</td>
                     <td value = "{{expense.date}}">{{expense.date}}</td>
-                    <td><a href = "{% url 'expense-edit' expense.id %}" class = "btn btn-secondary btn-sm">Edit</a></td>
-                    <td><a href ="{% url 'expense-delete' expense.id %}" class = "btn btn-danger btn-sm" value = "Delete">Delete</a></td>
+                    <td><a href = "{% url 'expense-edit' expense.id %}" class = "edit-button btn ">Edit</a></td>
+                    <td><a href ="{% url 'expense-delete' expense.id %}" class = " btn delete-button" value = "Delete">Delete</a></td>
                 </tr>
 
                 {% endfor %}

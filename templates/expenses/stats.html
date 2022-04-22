@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="contiainer mt-4"  >
+    <div class="row">
+        <div class="col-md-9">
+    
+
+
+            <div >
+                <nav aria-label="breadcrumb" style="padding: 5px; background-color: gainsboro;">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Summary</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">My Summary</li>
+                    </ol>
+                </nav>
+            </div>
+            
+        </div>
+
+
+        <div class="col-md-2">
+            <a href="{{request.META.HTTP_REFERER}}" class = "btn btn-primary">Back</a>
+        </div>
+            
+            
+            
+            
+            
+    </div>
+
+    <br>
+   <center>Expenses</center>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    
+     
+
+
+
+
+
+
+
+</div>
+
+
+<br>
+
+<script src="{% static 'js/stats.js' %}"></script>
+
+
+{% endblock content %}
