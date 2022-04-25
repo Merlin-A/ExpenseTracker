@@ -18,6 +18,8 @@ six = "*"
 django-libs = "*"
 props = "*"
 matplotlib = "*"
+xlwt = "*"
+weasyprint = "*"
 
 [dev-packages]
 
