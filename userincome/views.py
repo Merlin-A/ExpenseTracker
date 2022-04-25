@@ -9,7 +9,7 @@ import json
 from django.core.paginator import Paginator
 from django.http import JsonResponse
 from userpreferences.models import UserPreference
-from datetime import time
+import datetime
 
 # Create your views here.
 
@@ -184,3 +184,39 @@ def income_delete(request, id):
     income.delete()
     messages.success(request, 'Income Deleted Succesfully')
     return redirect('income')
+
+
+
+def income_source_summary(request):
+
+    todays_date = datetime.date.today()
+    six_months_ago = todays_date - datetime.timedelta(180)
+    userincome = UserIncome.objects.filter(owner = request.user, date__gte = six_months_ago, date__lte = todays_date)
+    finalrep = {}
+
+    def get_source(income):
+        return income.source
+
+    
+    source_list = list(set(map(get_source, userincome))) #set so all the categories even teh duplicate ones are listed 
+
+    def get_income_source_amount(source):
+        amount = 0
+        filtered_by_source = userincome.filter(source = source)
+
+        for item in filtered_by_source:
+            amount += item.amount 
+        return amount
+
+    for x in userincome:
+        for y in source_list:
+
+            finalrep[y] = get_income_source_amount(y)
+    
+    return JsonResponse({'income_source_data': finalrep}, safe = False)
+
+
+
+
+def statsView(request):
+    return render(request, 'userincome/stats.html')
