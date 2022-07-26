@@ -3,9 +3,10 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 
-<h1> Expensio </h1>
+<h1> Expensio <img src = "https://user-images.githubusercontent.com/78374254/181038062-22fa1612-c4f9-4712-ab86-5a9fcd87c48f.png" height = 22px width = 22px /></h1>
 
 <h3> Expense Tracker Web Application </h3>
+
 
 **Developed By: Aditya A**
 
