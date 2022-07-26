@@ -61,12 +61,12 @@ For local Implementation, Improvement or Usage -
 
 <p align = "center">
 1. Simply Download 
-2. Open PowerShell in your downloaded folder and run the following command.
+2. Open PowerShell in your downloaded folder and run any of the following command.
 
   a. 
   <i>pipenv shell </i>
     
-    <p>or</p> 
+    
     
   b. 
   <i>pip download -r requirements.txt</i>
