@@ -83,7 +83,8 @@ For local Implementation, Improvement or Usage -
 
 
 
-<h2> I am keen on improving the project by adding functionalites, enhancing UI etc. to provide better </h2>
+<p> I am keen on improving the project by Adding Functionalites, Enhancing UI and else to provide better User Experience.
+    Any Suggestions, Contribution and Forking is Highly Appreciated!! <p>
       
       
 
