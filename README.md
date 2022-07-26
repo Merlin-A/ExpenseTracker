@@ -45,12 +45,17 @@ Expensio is a Django based Expense Tracker Web App. It keeps track of Expenses a
 
 It is very versatile and has access to various features to make the functionality better. 
 
-![image](https://user-images.githubusercontent.com/78374254/181028680-edb5e262-307d-4748-acec-fe3f4d5d849d.png)
+![image](https://user-images.githubusercontent.com/78374254/181038594-532d91f4-3575-47b6-838e-e78bbe5d567b.png)
+![image](https://user-images.githubusercontent.com/78374254/181038617-e42752b7-ba1e-44d6-b14c-04d3cdb5347e.png)
+
 
 Expensio also keeps track of all the transactions and provides graphical and statistical summaries of the same, with the option of downloading them for futher analysis.
 
-![image](https://user-images.githubusercontent.com/78374254/181029056-7c6bc9d9-46ad-4a04-ba13-2a51d8f25de7.png)
+![image](https://user-images.githubusercontent.com/78374254/181038656-c47c0b15-eb8f-445f-ae65-f04679579334.png)
 
+<br> <br>
+
+![image](https://user-images.githubusercontent.com/78374254/181038823-75ec2635-3dcc-4de2-b289-3bf4dcf89b0a.png)
 
 
 
