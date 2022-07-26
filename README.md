@@ -70,12 +70,12 @@ For local Implementation, Improvement or Usage -
 2. Open PowerShell in your downloaded folder and run any of the following command.
 
   a. 
-  <i>pipenv shell </i>
+  <pre><code>pipenv shell </code></pre>
     
     
     
   b. 
-  <i>pip download -r requirements.txt</i>
+  <pre><code>pip download -r requirements.txt </code></pre>
     
 3. Once the Process is Complete, run the following Command. 
 
