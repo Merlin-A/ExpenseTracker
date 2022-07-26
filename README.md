@@ -91,7 +91,7 @@ For local Implementation, Improvement or Usage -
 
 
 
-<p> I am keen on improving the project by Adding Functionalites, Enhancing UI and else to provide better User Experience.
+<p> I am keen on improving the project by Adding Functionalites, Enhancing UI and more to provide better User Experience.
     Any Suggestions, Contribution and Forking is Highly Appreciated!! <p>
       
       
