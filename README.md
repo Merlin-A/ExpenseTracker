@@ -80,7 +80,7 @@ For local Implementation, Improvement or Usage -
 3. Once the Process is Complete, run the following Command. 
 
 
-<pre <code> python manage.py runserver <code>/>
+<code> python manage.py runserver </code>
     
 </p>
     
