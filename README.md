@@ -50,6 +50,41 @@ Expensio also keeps track of all the transactions and provides graphical and sta
 
 ![image](https://user-images.githubusercontent.com/78374254/181029056-7c6bc9d9-46ad-4a04-ba13-2a51d8f25de7.png)
 
-Expensio uses various encodings to keep the user data safe. 
+
+
+
+## Installation 
+
+Deployment of the Project is in the works, I'll provide the reference once Online.
+
+For local Implementation, Improvement or Usage - 
+
+<p align = "center">
+1. Simply Download 
+2. Open PowerShell in your downloaded folder and run the following command.
+
+  a. <i>pipenv shell </i>
+    
+    or 
+    
+  b. <i>pip download -r requirements.txt</i>
+    
+3. Once the Process is Complete, run the following Command. 
+
+
+  <i> python manage.py runserver. </i>
+    
+</p>
+    
+    
+![image](https://user-images.githubusercontent.com/78374254/181035165-8fba75a4-4a33-47ce-9442-a675e92f3d5b.png)
+
+**Run the Local Address on Browser**
+
+
+
+<h2> I am keen on improving the project by adding functionalites, enhancing UI etc. to provide better </h2>
+      
+      
 
 
