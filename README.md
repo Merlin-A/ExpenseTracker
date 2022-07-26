@@ -33,9 +33,23 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
+<br>
+
+## Overview
+
+Expensio is a Django based Expense Tracker Web App. It keeps track of Expenses and Income of the user and works as a Record Book for all the exchanges. 
+
+![image](https://user-images.githubusercontent.com/78374254/181028515-0e3929f0-27d9-417e-bcdb-86a822ebe138.png)
 
 
+It is very versatile and has access to various features to make the functionality better. 
 
+![image](https://user-images.githubusercontent.com/78374254/181028680-edb5e262-307d-4748-acec-fe3f4d5d849d.png)
 
+Expensio also keeps track of all the transactions and provides graphical and statistical summaries of the same, with the option of downloading them for futher analysis.
+
+![image](https://user-images.githubusercontent.com/78374254/181029056-7c6bc9d9-46ad-4a04-ba13-2a51d8f25de7.png)
+
+Expensio uses various encodings to keep the user data safe. 
 
 
