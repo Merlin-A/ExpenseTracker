@@ -16,7 +16,7 @@
 
 
 
-## Entire Toolset 
+## Entire Toolset 🛠️
 <i> Languages, Framework, Environment, Testing Tools </i>
 
 <br>
@@ -35,7 +35,7 @@
 
 <br>
 
-## Overview
+## Overview 🔎
 
 Expensio is a Django based Expense Tracker Web App. It keeps track of Expenses and Income of the user and works as a Record Book for all the exchanges. 
 
